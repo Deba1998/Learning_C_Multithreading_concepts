@@ -1,7 +1,7 @@
 CXX		 = g++
 CXXFLAGS = -Wall -std=c++17 -pthread
-TARGET	 = join_detach
-SRC		 = join_detach.cpp
+TARGET	 = data_race
+SRC		 = data_race.cpp
 
 $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) $(SRC) -o bin/$(TARGET)
