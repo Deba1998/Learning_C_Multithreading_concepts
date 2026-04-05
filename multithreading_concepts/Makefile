@@ -1,7 +1,7 @@
 CXX		 = g++
 CXXFLAGS = -Wall -std=c++17 -pthread
-TARGET	 = data_race
-SRC		 = data_race.cpp
+TARGET	 = shared_mutex_try
+SRC		 = shared_mutex_try.cpp
 
 $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) $(SRC) -o bin/$(TARGET)
