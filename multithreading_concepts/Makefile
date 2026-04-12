@@ -1,12 +1,12 @@
 CXX		 = g++
 CXXFLAGS = -Wall -std=c++17 -pthread
-TARGET	 = divide_and_conquer
-SRC		 = divide_and_conquer.cpp
-# LDLIBS	 = -lboost_thread -lboost_system
+TARGET	 = dowload_images
+SRC		 = dowload_images.cpp
+LDLIBS	 = -lboost_thread -lboost_system -lcurl
 #$(LDLIBS)
 
 $(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) $(SRC)  -o bin/$(TARGET)
+	$(CXX) $(CXXFLAGS) $(SRC) $(LDLIBS) -o bin/$(TARGET)
 
 .PHONY: clean
 clean:
